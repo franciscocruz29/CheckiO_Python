@@ -21,7 +21,7 @@ Output: A bool. """
 
 
 def words_order(text: str, words: list) -> bool:
-    if 2 in [words.count(word) for word in words]:
+    if len(words) != len(set(words)):
         return False
 
     return [word for word in text.split() if word in words] == words
